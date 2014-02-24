@@ -1,0 +1,21 @@
+User journey
+
+OK  **If a building's size is not entered, it should return an error
+
+OK  **If a building's size is less than 100,000 sqft, it should return an error
+
+OK  **If a usere's name is not entered, it should return an error
+
+OK  **Checks if lighting is selected and assigns a variable to true
+
+OK  **Checks if HVAC is selected and assigns a variable to true
+
+OK   **Checks if Envelope is seleceted and assigns a variable to true
+
+OK   **If no efficiency checkboxes are selected, it should return an error
+
+OK   **Calculates the total benefits
+
+OK   **Displays the total benefit results by appending values to a a div.
+
+

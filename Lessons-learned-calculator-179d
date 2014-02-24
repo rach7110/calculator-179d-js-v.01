@@ -1,0 +1,61 @@
+Lessons Learned:
+Heroku Deployment:
+Tried specifiying Ruby version in gemfile, did not work
+Tried using This insta=ead of WEerick
+
+-------------------------------------------------
+CSS - Image centering:
+  {
+margin: auto 
+display: block   <--- !!!!
+}
+-------------------------------------------------
+Responsive Design - Media Queries:
+In order to incorprate multiple styles in the same css file, the @media query must be placed below the default stlying. 
+
+*****Example:*******
+
+This DOES works: 
+
+.column.one-fourth {
+	width: 21.25%;
+}
+
+@media all and (max-width: 640px) {
+	.column.one-fourth {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+This  DOES NOT work:
+@media all and (max-width: 640px) {
+	.column.one-fourth {
+		margin: 0;
+		width: 100%;
+	}
+}
+.column.one-fourth {
+	width: 21.25%;
+}
+-------------------------------------------------
+JavaScript:
+*****Ensure code runs after the browser finishes loading the document - test:*****
+window.onload = (function(){
+  alert("Works!");
+});
+
+*****Where to put JavaScript:*****
+When to put script in HEAD
+
+Scripts to be executed when they are called, or when an event is triggered, are placed in functions. Put your functions in the head section, this way they are all in one place, and they do not interfere with page content.
+
+When to put script in BODY
+
+If you don't want your script to be placed inside a function, or if your script should write page content, it should be placed in the body section.
+-------------------------------------------------
+Tutorials - Build a Calculator:
+http://thecodeplayer.com/walkthrough/javascript-css3-calculator
+http://www.codecademy.com/courses/web-intermediate-en-jfhjJ/0/1
+http://jsfiddle.net/interdream/fCXMt/4/
+-------------------------------------------------
