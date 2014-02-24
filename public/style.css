@@ -1,0 +1,128 @@
+/* light gray */
+/* pink */
+/* dark gray */
+/* Greenergy <p> color */
+/*With box-sizing: border-box
+Borders and padding are drawn inside the set width of your content. The margin is drawn outside.*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 22px;
+  color: #666666; }
+
+.canvas {
+  background-image: url("background-image-179d.jpg"); }
+
+#main, #header {
+  margin: 0 auto;
+  max-width: 1216px;
+  /*height: 100%;*/
+  width: 90%;
+  background-color: white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  border: black 1px dashed; }
+
+.column {
+  float: left;
+  margin-left: 5%; }
+
+.column:first-child {
+  margin-left: 0; }
+
+.column.full {
+  width: 100%; }
+
+.column.two-thirds {
+  width: 65%; }
+
+.column.half {
+  width: 47.5%; }
+
+.column.one-third {
+  width: 30%; }
+
+.column.one-fourth {
+  width: 21.25%; }
+
+/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
+browser uses. This is the bread and butter of responsive web design.*/
+@media all and (max-width: 640px) {
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 0;
+    width: 100%; }
+
+  img {
+    max-width: 90%; } }
+/*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
+.row {
+  overflow: hidden;
+  padding: 30px; }
+
+/*.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+ 
+.clearfix:after {
+	clear: both;
+}
+ 
+.clearfix {
+	*zoom: 1;
+}*/
+#header {
+  height: 123px; }
+
+/*#banner {	height: 100%; }*/
+#banner img {
+  margin: 0 auto;
+  display: block; }
+
+#calculator-title {
+  margin-top: 30px;
+  font-size: 28px;
+  color: gray;
+  text-align: left; }
+
+#user-inputs {
+  text-align: center;
+  border: 1px dashed gray; }
+
+input.text {
+  width: 200px; }
+
+#energy-type {
+  text-align: center;
+  border: 1px dashed gray; }
+
+#energy-type img {
+  max-width: 180px;
+  padding-bottom: 10px; }
+
+#results {
+  height: 80px; }
+
+#submit {
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px dashed gray; }
+
+#submit-button {
+  text-align: center;
+  width: 150px;
+  background-color: #6ea842;
+  color: white; }
