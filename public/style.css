@@ -114,7 +114,8 @@ input.text {
   padding-bottom: 10px; }
 
 #results {
-  height: 80px; }
+  height: 80px;
+  color: #6ea842; }
 
 #submit {
   text-align: center;
