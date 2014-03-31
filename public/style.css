@@ -16,7 +16,8 @@ Borders and padding are drawn inside the set width of your content. The margin i
   color: #666666; }
 
 .canvas {
-  background-image: url("background-image-179d.jpg"); }
+  background-image: url("background-image-179d.jpg");
+  }
 
 #main, #header {
   margin: 0 auto;
@@ -30,6 +31,11 @@ Borders and padding are drawn inside the set width of your content. The margin i
   -o-border-radius: 0px;
   border-radius: 0px;
   border: black 1px dashed; }
+
+  #results {
+    border-radius: 8px;
+    border: #ddd 1px solid;
+  }
 
 .column {
   float: left;

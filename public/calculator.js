@@ -2,10 +2,10 @@
 //   alert("Works!");
 // });
 $(document).ready(function(){
-	event.preventDefault();
-	$(':submit').click(function(){
+  event.preventDefault();
+  $(':submit').click(function(){
     $('div#results').empty();
-		var size = document.getElementById("size").value;
+    var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
 
     var lighting = false;
