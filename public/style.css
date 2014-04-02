@@ -15,34 +15,44 @@ Borders and padding are drawn inside the set width of your content. The margin i
   font-size: 22px;
   color: #666666; }
 
-.canvas {
-  background-image: url("background-image-179d.jpg");
-  }
+.container {
+  /*background-image: url('background-image-179d.jpg')*/ }
 
-#main, #header {
+.header {
+  height: 123px; }
+
+.header, .main {
   margin: 0 auto;
   max-width: 1216px;
-  /*height: 100%;*/
   width: 90%;
   background-color: white;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
-  border-radius: 0px;
-  border: black 1px dashed; }
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: black 1px solid; }
 
-  #results {
-    border-radius: 8px;
-    border: #ddd 1px solid;
-  }
+.banner img {
+  margin: 0 auto;
+  display: block; }
+
+.inner {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.row {
+  overflow: hidden;
+  padding: 30px; }
 
 .column {
   float: left;
-  margin-left: 5%; }
+  margin-left: 5%;
+  margin-bottom: 25px; }
 
 .column:first-child {
-  margin-left: 0; }
+  /*margin-left: 0;*/ }
 
 .column.full {
   width: 100%; }
@@ -73,10 +83,6 @@ browser uses. This is the bread and butter of responsive web design.*/
   img {
     max-width: 90%; } }
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
-.row {
-  overflow: hidden;
-  padding: 30px; }
-
 /*.clearfix:before,
 .clearfix:after {
 	content: " ";
@@ -90,43 +96,33 @@ browser uses. This is the bread and butter of responsive web design.*/
 .clearfix {
 	*zoom: 1;
 }*/
-#header {
-  height: 123px; }
-
-/*#banner {	height: 100%; }*/
-#banner img {
-  margin: 0 auto;
-  display: block; }
+input {
+  width: 200px; }
 
 #calculator-title {
-  margin-top: 30px;
   font-size: 28px;
   color: gray;
   text-align: left; }
 
 #user-inputs {
-  text-align: center;
+  /*text-align: center;*/
   border: 1px dashed gray; }
-
-input.text {
-  width: 200px; }
 
 #energy-type {
   text-align: center;
-  border: 1px dashed gray; }
+  /*border: 1px dashed gray;*/ }
 
 #energy-type img {
   max-width: 180px;
   padding-bottom: 10px; }
 
-#results {
-  height: 80px;
+#user-results {
   color: #6ea842; }
 
 #submit {
   text-align: center;
   background-color: #eeeeee;
-  border: 1px dashed gray; }
+  /*border: 1px dashed gray;*/ }
 
 #submit-button {
   text-align: center;

@@ -5,53 +5,68 @@ $color4: white;
 $color5: #666; /* dark gray */
 $color6: #6EA842;  /* Greenergy <p> color */
 
-@mixin border-radius($radius, $border-color) {
-	-webkit-border-radius: $radius;
-		 -moz-border-radius: $radius;
-			-ms-border-radius: $radius;
-			 -o-border-radius: $radius;
-					border-radius: $radius;
-	border: $border-color 1px dashed;
+@mixin border-radius($radius, $border-color, $type) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+  border: $border-color 1px $type;
 }
 
 /*With box-sizing: border-box
 Borders and padding are drawn inside the set width of your content. The margin is drawn outside.*/
 *, *:before, *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0px;
-	padding: 0px;
-	font-size: 22px;
-	color: $color5;
+  margin: 0px;
+  padding: 0px;
+  font-size: 22px;
+  color: $color5;
 }
 
-body {
+.container {
+  /*background-image: url('background-image-179d.jpg')*/
 }
 
-.canvas {
-	background-image: url('background-image-179d.jpg')
+.header { height: 123px; }
+
+.header, .main {
+  margin: 0 auto;
+  max-width: 1216px;
+  width: 90%;
+  background-color: $color4;
+  @include border-radius(8px, black, solid);
 }
 
-#main, #header {
-	margin: 0 auto;
-	max-width: 1216px;
-	/*height: 100%;*/
-	width: 90%;
-	background-color: $color4;
-	@include border-radius(0px, black);
+.banner img {
+  margin: 0 auto;
+  display: block;
+}
+
+.inner {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  overflow: hidden;
+  padding: 30px;
 }
 
 .column {
 	float: left;
 	margin-left: 5%;
+  margin-bottom: 25px;
 }
 
 .column:first-child {
-	margin-left: 0;
+	/*margin-left: 0;*/
 }
 
 .column.full {
@@ -91,10 +106,7 @@ browser uses. This is the bread and butter of responsive web design.*/
 }
 
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
-.row {
-	overflow: hidden;
-	padding: 30px;
-}
+
 
 /*.clearfix:before,
 .clearfix:after {
@@ -110,49 +122,41 @@ browser uses. This is the bread and butter of responsive web design.*/
 	*zoom: 1;
 }*/
 
-#header {	height: 123px; }
-
-/*#banner {	height: 100%; }*/
-
-#banner img {
-	margin: 0 auto;
-	display: block;
+input{
+  width: 200px;
 }
 
 #calculator-title {
-	margin-top: 30px;
-	font-size: 28px;
+  font-size: 28px;
 	color: $color1;
 	text-align: left;
 }
 
-#user-inputs {
-	text-align: center;
-	border: 1px dashed gray;
+#user-inputs{
+  /*text-align: center;*/
+  border: 1px dashed gray;
 }
 
-input.text {
-	width: 200px;
-}
+#building-size { }
+
 
 #energy-type {
 	text-align: center;
-	border: 1px dashed gray;
+	/*border: 1px dashed gray;*/
 }
 #energy-type img{ 
 	max-width: 180px;
 	padding-bottom: 10px;
  }
 
-#results {
-	height: 80px;
+#user-results {
 	color: $color6;
 }
 
 #submit {
   text-align: center;
   background-color: $color2;
-  border: 1px dashed gray;
+  /*border: 1px dashed gray;*/
 }
 
 #submit-button {
