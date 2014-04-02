@@ -4,7 +4,8 @@ $color3: #ec6f66; /* pink */
 $color4: white;
 $color5: #666; /* dark gray */
 $color6: #6EA842;  /* Greenergy <p> color */
-$border: $color5 1px dashed;
+$border1: $color5 1px dashed;
+$border2: $color5 1px solid;
 
 @mixin special-border($radius, $border-color, $type) {
   -webkit-border-radius: $radius;
@@ -61,7 +62,7 @@ input {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  border: $border;
+  border: $border2;
 }
 
 .row {
@@ -153,7 +154,12 @@ browser uses. This is the bread and butter of responsive web design.*/
 
 #user-inputs{
   margin: 0 2em 0 2em;
-  border: $border;
+  border: $border1;
+}
+
+#user-results{
+  margin: 0 2em 0 2em;
+  border: $border1;
 }
 
 #energy-type {

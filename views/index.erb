@@ -1,22 +1,21 @@
 <html>
-	<head>
-		<title>179D Calculator</title>
+  <head>
+    <title>179D Calculator</title>
 
-		<link rel="stylesheet" href="style.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 	<body>
-		<div class="container">
+    <div class="container">
 <!-- Header and logo -->
-			<div class="row header">
-			</div>
+      <div class="row header">
+      </div>
 <!-- Banner image -->
-			<div class="row banner">
-			 <img src="http://lorempixel.com/640/281/sports/1/">
-			</div>
-
+      <div class="row banner">
+        <img src="http://lorempixel.com/640/281/sports/1/">
+      </div>
 			<div class="main">
 <!-- Calculator title -->
 				<div class="row">
@@ -26,27 +25,39 @@
 				</div>
 				<div class="inner">
 <!-- Inputs Title -->
-	        <div class="row">
-	          <div class="column full" id="inputs-title">
-	            <strong>Please fill in the inputs:</strong>
-	          </div>
-	        </div>
-					<div id="user-inputs">
-	<!-- Building size field -->
-            <div class="row">
-              <label for="building-size" class="column one-third">Building's size (sqft):</label>
-              <div class="column one-fifth"></div>
-              <input class="column one-fifth" type="text" id="building-size" value="100000">
-              <div class="column one-fifth"></div>
+          <div class="row">
+            <div class="column full" id="inputs-title">
+              <strong>Please fill in the inputs:</strong>
             </div>
-		<!-- Name field -->
+          </div>
+          <div id="user-inputs">
+<!-- Name field -->
             <div class="row">
               <label for="name" class="column one-third">Enter your Name:</label>
               <div class="column one-fifth"></div>
               <input class="column one-fifth" type="text" id="name" value="Rachel">
               <div class="column one-fifth"></div>
             </div>
-		<!--Energy efficiceny selection boxes: -->
+<!-- Building size field -->
+            <div class="row">
+              <label for="building-size" class="column one-third">Building's size (sqft):</label>
+              <div class="column one-fifth"></div>
+              <input class="column one-fifth" type="text" id="building-size" value="100000">
+              <div class="column one-fifth"></div>
+            </div>
+<!-- Building type dropdown menu -->
+            <div class="row">
+              <label for="building-type" class="column one-third">Building Type:</label>
+              <div class="column one-fifth"></div>
+              <input list="building-types" class="column one-fifth" value="menu list"/>
+                <datalist id="building-types">
+                  <option value="Government">
+                  <option value="Commercial">
+                  <option value="Residential">
+                </datalist>
+              <div class="column one-fifth"></div>
+            </div>
+<!--Energy efficiceny selection boxes: -->
 						<div class="row" id="energy-type">
 							<div class="column one-third">
 								<p>Efficient Lighting?</p>
@@ -63,13 +74,13 @@
 								<img src="envelope.jpg">
 								<input type="checkbox" id="env" style="width: 200px;">
 							</div>
-						</div> 
-					</div>      
-		<!-- Submit button: -->
+						</div>
+          </div>
+<!-- Submit button: -->
 					<div class="row" id="submit">
 						<input id="submit-button" type="submit" >
 					</div>
-		<!--  *****************************  -->
+<!--  *****************************  -->
 					<div id="user-results">
 						<h3>Estimation:</h3>
 						<div class="row">
@@ -80,8 +91,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+
+
 		</div>
 		<script type="text/javascript" src="calculator.js"></script>
 	</body>

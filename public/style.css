@@ -47,7 +47,7 @@ input {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  border: #666666 1px dashed; }
+  border: #666666 1px solid; }
 
 .row {
   overflow: hidden;
@@ -118,6 +118,10 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: #ec6f66; }
 
 #user-inputs {
+  margin: 0 2em 0 2em;
+  border: #666666 1px dashed; }
+
+#user-results {
   margin: 0 2em 0 2em;
   border: #666666 1px dashed; }
 
