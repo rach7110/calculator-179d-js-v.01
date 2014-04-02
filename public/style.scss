@@ -60,49 +60,49 @@ Borders and padding are drawn inside the set width of your content. The margin i
 }
 
 .column {
-	float: left;
-	margin-left: 5%;
+  float: left;
+  margin-left: 5%;
   margin-bottom: 25px;
 }
 
 .column:first-child {
-	/*margin-left: 0;*/
+  /*margin-left: 0;*/
 }
 
 .column.full {
-	width: 100%;
+  width: 100%;
 }
-	
+
 .column.two-thirds {
-	width: 65%;
+  width: 65%;
 }
-	
+
 .column.half {
-	width: 47.5%;
+  width: 47.5%;
 }
  
 .column.one-third {
-	width: 30%;
+  width: 30%;
 }
  
 .column.one-fourth {
-	width: 21.25%;
+  width: 21.25%;
 }
 
 /*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
 browser uses. This is the bread and butter of responsive web design.*/
 @media all and (max-width: 640px) {
-	.column.full,
-	.column.two-thirds,
-	.column.half,
-	.column.one-third,
-	.column.one-fourth {
-		margin: 0;
-		width: 100%;
-	}
-	img {
-		max-width: 90%;
-	}
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 0;
+    width: 100%;
+  }
+  img {
+    max-width: 90%;
+  }
 }
 
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
@@ -110,16 +110,16 @@ browser uses. This is the bread and butter of responsive web design.*/
 
 /*.clearfix:before,
 .clearfix:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
  
 .clearfix:after {
-	clear: both;
+  clear: both;
 }
  
 .clearfix {
-	*zoom: 1;
+  *zoom: 1;
 }*/
 
 input{
@@ -128,8 +128,8 @@ input{
 
 #calculator-title {
   font-size: 28px;
-	color: $color1;
-	text-align: left;
+  color: $color1;
+  text-align: left;
 }
 
 #user-inputs{
@@ -139,18 +139,17 @@ input{
 
 #building-size { }
 
-
 #energy-type {
-	text-align: center;
-	/*border: 1px dashed gray;*/
+  text-align: center;
+/*border: 1px dashed gray;*/
 }
 #energy-type img{ 
-	max-width: 180px;
-	padding-bottom: 10px;
+  max-width: 180px;
+  padding-bottom: 10px;
  }
 
 #user-results {
-	color: $color6;
+  color: $color6;
 }
 
 #submit {
@@ -160,13 +159,8 @@ input{
 }
 
 #submit-button {
-	text-align: center;
-	width: 150px;
-	background-color: $color6;
-	color: $color4;
+  text-align: center;
+  width: 150px;
+  background-color: $color6;
+  color: $color4;
 }
-
-
-
-
-
