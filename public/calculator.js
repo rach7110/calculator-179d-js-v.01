@@ -3,9 +3,11 @@
 // });
 $(document).ready(function(){
   event.preventDefault();
+  $('#user-results').hide();
   $(':submit').click(function(){
-    $('div#results').empty();
-    var size = document.getElementById("size").value;
+    $('#user-results').show(); 
+    $('div#benefit-results').empty();
+    var size = document.getElementById("building-size").value;
     var name = document.getElementById("name").value;
 
     var lighting = false;
@@ -62,7 +64,7 @@ $(document).ready(function(){
       alert("You must select at least one buidling efficiency to qualify");
     } else {
     var totalBenefits = (benefitLighting + benefitHvac + benefitEnv);
-    $('div#results').show().append('<strong>Your total potential tax beenfit: $ </strong>' + totalBenefits);
+    $('div#benefit-results').show().append('<strong>Your total potential tax beenfit: $ </strong>' + totalBenefits);
     };
   });
 });

@@ -133,9 +133,6 @@ browser uses. This is the bread and butter of responsive web design.*/
   max-width: 180px;
   padding-bottom: 10px; }
 
-#user-results {
-  color: #6ea842; }
-
 #submit {
   text-align: center;
   background-color: #eeeeee;
@@ -146,3 +143,6 @@ browser uses. This is the bread and butter of responsive web design.*/
   width: 150px;
   background-color: #6ea842;
   color: white; }
+
+#benefit-results {
+  color: #6ea842; }
