@@ -15,6 +15,12 @@ Borders and padding are drawn inside the set width of your content. The margin i
   font-size: 22px;
   color: #666666; }
 
+label {
+  text-align: right; }
+
+input {
+  text-align: center; }
+
 .container {
   /*background-image: url('background-image-179d.jpg')*/ }
 
@@ -31,16 +37,17 @@ Borders and padding are drawn inside the set width of your content. The margin i
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  border: black 1px solid; }
+  border: #666666 1px solid; }
 
 .banner img {
   margin: 0 auto;
   display: block; }
 
 .inner {
-  max-width: 800px;
+  max-width: 960px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  border: #666666 1px dashed; }
 
 .row {
   overflow: hidden;
@@ -52,7 +59,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
   margin-bottom: 25px; }
 
 .column:first-child {
-  /*margin-left: 0;*/ }
+  margin-left: 0; }
 
 .column.full {
   width: 100%; }
@@ -61,13 +68,16 @@ Borders and padding are drawn inside the set width of your content. The margin i
   width: 65%; }
 
 .column.half {
-  width: 47.5%; }
+  width: 44%; }
 
 .column.one-third {
   width: 30%; }
 
 .column.one-fourth {
   width: 21.25%; }
+
+.column .one-fifth {
+  width: 15%; }
 
 /*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
 browser uses. This is the bread and butter of responsive web design.*/
@@ -81,10 +91,13 @@ browser uses. This is the bread and butter of responsive web design.*/
     width: 100%; }
 
   img {
-    max-width: 90%; } }
+    max-width: 90%; }
+
+  label {
+    text-align: center; } }
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
 /*.clearfix:before,
-  .clearfix:after {
+.clearfix:after {
   content: " ";
   display: table;
 }
@@ -96,17 +109,17 @@ browser uses. This is the bread and butter of responsive web design.*/
 .clearfix {
   *zoom: 1;
 }*/
-input {
-  width: 200px; }
-
 #calculator-title {
   font-size: 28px;
   color: gray;
   text-align: left; }
 
+#inputs-title {
+  color: #ec6f66; }
+
 #user-inputs {
-  /*text-align: center;*/
-  border: 1px dashed gray; }
+  margin: 0 2em 0 2em;
+  border: #666666 1px dashed; }
 
 #energy-type {
   text-align: center;

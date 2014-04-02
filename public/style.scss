@@ -4,8 +4,9 @@ $color3: #ec6f66; /* pink */
 $color4: white;
 $color5: #666; /* dark gray */
 $color6: #6EA842;  /* Greenergy <p> color */
+$border: $color5 1px dashed;
 
-@mixin border-radius($radius, $border-color, $type) {
+@mixin special-border($radius, $border-color, $type) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
@@ -29,6 +30,14 @@ Borders and padding are drawn inside the set width of your content. The margin i
   color: $color5;
 }
 
+label {
+  text-align: right;
+}
+
+input {
+  text-align: center;
+}
+
 .container {
   /*background-image: url('background-image-179d.jpg')*/
 }
@@ -40,7 +49,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
   max-width: 1216px;
   width: 90%;
   background-color: $color4;
-  @include border-radius(8px, black, solid);
+  @include special-border(8px, $color5, solid);
 }
 
 .banner img {
@@ -49,9 +58,10 @@ Borders and padding are drawn inside the set width of your content. The margin i
 }
 
 .inner {
-  max-width: 800px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  border: $border;
 }
 
 .row {
@@ -66,7 +76,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
 }
 
 .column:first-child {
-  /*margin-left: 0;*/
+  margin-left: 0;
 }
 
 .column.full {
@@ -78,7 +88,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
 }
 
 .column.half {
-  width: 47.5%;
+  width: 44%;
 }
  
 .column.one-third {
@@ -87,6 +97,10 @@ Borders and padding are drawn inside the set width of your content. The margin i
  
 .column.one-fourth {
   width: 21.25%;
+}
+
+.column .one-fifth {
+  width: 15%;
 }
 
 /*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
@@ -102,6 +116,9 @@ browser uses. This is the bread and butter of responsive web design.*/
   }
   img {
     max-width: 90%;
+  }
+  label{
+    text-align: center;
   }
 }
 
@@ -122,22 +139,22 @@ browser uses. This is the bread and butter of responsive web design.*/
   *zoom: 1;
 }*/
 
-input{
-  width: 200px;
-}
-
 #calculator-title {
   font-size: 28px;
   color: $color1;
   text-align: left;
 }
 
-#user-inputs{
-  /*text-align: center;*/
-  border: 1px dashed gray;
+#inputs-title {
+  color: $color3;
 }
 
-#building-size { }
+#results-title {}
+
+#user-inputs{
+  margin: 0 2em 0 2em;
+  border: $border;
+}
 
 #energy-type {
   text-align: center;

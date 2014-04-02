@@ -1,82 +1,88 @@
 <html>
-  <head>
-    <title>179D Calculator</title>
+	<head>
+		<title>179D Calculator</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div class="container">
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="container">
 <!-- Header and logo -->
-      <div class="row header">
-      </div>
+			<div class="row header">
+			</div>
 <!-- Banner image -->
-      <div class="row banner">
-       <img src="http://lorempixel.com/640/281/sports/1/">
-      </div>
+			<div class="row banner">
+			 <img src="http://lorempixel.com/640/281/sports/1/">
+			</div>
 
-      <div class="main">
+			<div class="main">
 <!-- Calculator title -->
-        <div class="row">
-          <div class="column full" id="calculator-title">
-            <strong>179D Tax Estimation &nbsp;&nbsp;&gt; </strong>Energy Efficient Buildings
-          </div>
-        </div>
-        <div class="inner" id="user-inputs">
-  <!-- Building size field -->
-          <div class="row">
-            <div class="column half">
-              <label for="building-size">Enter your building's size (sqft):</label>
-            </div>
-            <div class="column half">
-              <input type="text" id="building-size" value="100000">    
-            </div>
-          </div>
-  <!-- Name field -->
-          <div class="row">
-            <div class="column full">
-              Enter your Name: 
-              <input type="text" id="name" value="Rachel">    
-            </div>
-          </div>
-  <!--Energy efficiceny selection boxes: -->
-          <div class="row" id="energy-type">
-            <div class="column one-third">
-              <p>Efficient Lighting?</p>
-              <img src="lighting.jpg">
-              <input type="checkbox" id="lighting" style="width: 200px;">
-            </div>
-            <div class="column one-third">
-              <p>Efficient HVAC?</p> 
-              <img src="hvac.jpg"> 
-              <input type="checkbox" id="hvac" style="width: 200px;">
-            </div>
-            <div class="column one-third">
-              <p>Efficient Envelope?</p> 
-              <img src="envelope.jpg">
-              <input type="checkbox" id="env" style="width: 200px;">
-            </div>
-          </div>       
-  <!-- Submit button: -->
-          <div class="row" id="submit">
-            <input id="submit-button" type="submit" >
-          </div>
-  <!--  *****************************  -->
-          <div id="user-results">
-            <h3>Estimation:</h3>
+				<div class="row">
+					<div class="column full" id="calculator-title">
+						<strong>179D Tax Estimation &nbsp;&nbsp;&gt; </strong>Energy Efficient Buildings
+					</div>
+				</div>
+				<div class="inner">
+<!-- Inputs Title -->
+	        <div class="row">
+	          <div class="column full" id="inputs-title">
+	            <strong>Please fill in the inputs:</strong>
+	          </div>
+	        </div>
+					<div id="user-inputs">
+	<!-- Building size field -->
             <div class="row">
-              <div class="column full">
-               <p>Narwhal kitsch butcher single-origin coffee, Blue Bottle umami Thundercats street art bicycle rights asymmetrical yr photo booth cardigan. Carles High Life mixtape, dreamcatcher Etsy pork belly typewriter roof party try-hard Intelligentsia. Put a bird on it YOLO umami, brunch gastropub Marfa craft beer Neutra butcher scenester fanny pack you probably haven't heard of them meggings. Distillery Blue Bottle Banksy, YOLO kitsch Bushwick hashtag photo booth letterpress irony fashion axe fixie gluten-free. Deep v drinking vinegar cornhole, Godard meggings kogi Schlitz before they sold out letterpress try-hard actually. Terry Richardson +1 mustache polaroid yr you probably haven't heard of them sartorial Schlitz, Cosby sweater Pitchfork fanny pack. Selvage seitan cred Shoreditch organic church-key.
-
-                Letterpress direct trade irony chia slow-carb roof party raw denim Vice before they sold out selfies, Wes Anderson you probably haven't heard of them. Helvetica Odd Future salvia polaroid PBR&B squid. Twee authentic squid, keffiyeh keytar hoodie retro forage small batch. Direct trade seitan Cosby sweater keytar, tattooed Marfa Tonx mumblecore church-key Helvetica McSweeney's chambray. Typewriter Brooklyn Thundercats selfies. Hella Echo Park pickled retro. Leggings cray lomo messenger bag sriracha, bespoke butcher Truffaut tattooed put a bird on it narwhal synth occupy tote bag.</p>
-              </div>
+              <label for="building-size" class="column one-third">Building's size (sqft):</label>
+              <div class="column one-fifth"></div>
+              <input class="column one-fifth" type="text" id="building-size" value="100000">
+              <div class="column one-fifth"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="calculator.js"></script>
-  </body>
+		<!-- Name field -->
+            <div class="row">
+              <label for="name" class="column one-third">Enter your Name:</label>
+              <div class="column one-fifth"></div>
+              <input class="column one-fifth" type="text" id="name" value="Rachel">
+              <div class="column one-fifth"></div>
+            </div>
+		<!--Energy efficiceny selection boxes: -->
+						<div class="row" id="energy-type">
+							<div class="column one-third">
+								<p>Efficient Lighting?</p>
+								<img src="lighting.jpg">
+								<input type="checkbox" id="lighting" style="width: 200px;">
+							</div>
+							<div class="column one-third">
+								<p>Efficient HVAC?</p> 
+								<img src="hvac.jpg"> 
+								<input type="checkbox" id="hvac" style="width: 200px;">
+							</div>
+							<div class="column one-third">
+								<p>Efficient Envelope?</p> 
+								<img src="envelope.jpg">
+								<input type="checkbox" id="env" style="width: 200px;">
+							</div>
+						</div> 
+					</div>      
+		<!-- Submit button: -->
+					<div class="row" id="submit">
+						<input id="submit-button" type="submit" >
+					</div>
+		<!--  *****************************  -->
+					<div id="user-results">
+						<h3>Estimation:</h3>
+						<div class="row">
+							<div class="column full">
+							 <p>Narwhal kitsch butcher single-origin coffee, Blue Bottle umami Thundercats street art bicycle rights asymmetrical yr photo booth cardigan. Carles High Life mixtape, dreamcatcher Etsy pork belly typewriter roof party try-hard Intelligentsia. Put a bird on it YOLO umami, brunch gastropub Marfa craft beer Neutra butcher scenester fanny pack you probably haven't heard of them meggings. Distillery Blue Bottle Banksy, YOLO kitsch Bushwick hashtag photo booth letterpress irony fashion axe fixie gluten-free. Deep v drinking vinegar cornhole, Godard meggings kogi Schlitz before they sold out letterpress try-hard actually. Terry Richardson +1 mustache polaroid yr you probably haven't heard of them sartorial Schlitz, Cosby sweater Pitchfork fanny pack. Selvage seitan cred Shoreditch organic church-key.
+
+								Letterpress direct trade irony chia slow-carb roof party raw denim Vice before they sold out selfies, Wes Anderson you probably haven't heard of them. Helvetica Odd Future salvia polaroid PBR&B squid. Twee authentic squid, keffiyeh keytar hoodie retro forage small batch. Direct trade seitan Cosby sweater keytar, tattooed Marfa Tonx mumblecore church-key Helvetica McSweeney's chambray. Typewriter Brooklyn Thundercats selfies. Hella Echo Park pickled retro. Leggings cray lomo messenger bag sriracha, bespoke butcher Truffaut tattooed put a bird on it narwhal synth occupy tote bag.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="calculator.js"></script>
+	</body>
 </html>
