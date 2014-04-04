@@ -170,6 +170,12 @@ browser uses. This is the bread and butter of responsive web design.*/
   position: relative;
   left: 0; }
 
+#user-results .row:nth-child(1) {
+  padding-bottom: 10px; }
+
+#results-title h3 {
+  color: #6ea842; }
+
 #cell-value {
   border-bottom: rgba(102, 102, 102, 0.4) 1px solid;
   text-align: right; }
