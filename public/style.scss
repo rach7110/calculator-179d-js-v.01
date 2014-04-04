@@ -7,6 +7,7 @@ $color6: #6EA842;  /* Greenergy <p> color */
 $border1: $color5 1px dashed;
 $border2: $color5 1px solid;
 
+
 @mixin special-border($radius, $border-color, $type) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -45,7 +46,7 @@ input {
 
 .header { height: 123px; }
 
-.header, .main {
+.header, .main, .inner {
   margin: 0 auto;
   max-width: 1216px;
   width: 90%;
@@ -73,7 +74,7 @@ input {
 .column {
   float: left;
   margin-left: 5%;
-  margin-bottom: 25px;
+  /*margin-bottom: 25px;*/
 }
 
 .column:first-child {
@@ -184,6 +185,19 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: $color4;
 }
 
-#benefit-results {
+#user-results .column  {
+  border-left: $border2; 
+  border-right: $border2;
+  margin-left: 0px;
+}
+
+#user-results .row {
+  border: $border2; 
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#user-results {
   color: $color6;
+  border: 0px;
 }

@@ -18,19 +18,20 @@
       </div>
 			<div class="main">
 <!-- Calculator title -->
-				<div class="row">
-					<div class="column full" id="calculator-title">
-						<strong>179D Tax Estimation &nbsp;&nbsp;&gt; </strong>Energy Efficient Buildings
-					</div>
-				</div>
-				<div class="inner">
-<!-- Inputs Title -->
-          <div class="row">
-            <div class="column full" id="inputs-title">
-              <strong>Please fill in the inputs:</strong>
-            </div>
+        <div class="row">
+          <div class="column full" id="calculator-title">
+            <strong>179D Tax Estimation &nbsp;&nbsp;&gt;</strong>Energy Efficient Buildings
           </div>
+        </div>
+        <div class="inner">
+<!-- ***************** User Inputs***************** -->
           <div id="user-inputs">
+<!-- Inputs Title -->
+            <div class="row">
+              <div class="column full" id="inputs-title">
+                <strong>Please fill in the inputs:</strong>
+              </div>
+            </div>
 <!-- Name field -->
             <div class="row">
               <label for="name" class="column one-third">Enter your Name:</label>
@@ -51,9 +52,9 @@
               <div class="column one-fifth"></div>
               <input list="building-types" class="column one-fifth" value="menu list"/>
                 <datalist id="building-types">
-                  <option value="Government">
-                  <option value="Commercial">
-                  <option value="Residential">
+                  <option value="Government"></option>
+                  <option value="Commercial"></option>
+                  <option value="Residential"></option>
                 </datalist>
               <div class="column one-fifth"></div>
             </div>
@@ -76,17 +77,45 @@
 							</div>
 						</div>
           </div>
-<!--Results: -->
+<!--***************** User Results: *****************-->
           <div id="user-results">
-            <div id="benefit-results">
-              <h3>Estimation:</h3>
+<!-- Results Title -->
+            <div class="row">
+              <div class="column full" id="results-title">
+                <h3>Tax Deduction Estimation:</h3>
+              </div>
             </div>
+<!-- Line Item 1 -->
+            <div class="row">
+              <div class="column one-third">Square-footage</div>
+              <div class="column one-third"></div>
+              <div class="column one-third">(answer)</div>              
+            </div>
+<!-- Line Item 2 -->
+            <div class="row">
+              <div class="column one-third">Square-footage</div>
+              <div class="column one-third"></div>
+              <div class="column one-third">(answer)</div>              
+            </div>
+<!-- Line Item 3 -->
+          <div class="row">
+            <div class="column one-third">Square-footage</div>
+            <div class="column one-third"></div>
+            <div class="column one-third">(answer)</div>              
           </div>
+<!-- Line Item 4 -->
+          <div class="row">
+            <div class="column one-third">Square-footage</div>
+            <div class="column one-third"></div>
+            <div class="column one-third">(answer)</div>              
+          </div>
+        </div>
+<!-- ************************************* -->
 <!-- Submit button: -->
 					<div class="row" id="submit">
 						<input id="submit-button" type="submit" >
 					</div>
-<!--  *****************************  -->
+        </div>
 
 		<script type="text/javascript" src="calculator.js"></script>
 	</body>
