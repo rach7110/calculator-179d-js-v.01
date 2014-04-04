@@ -4,8 +4,10 @@ $color3: #ec6f66; /* pink */
 $color4: white;
 $color5: #666; /* dark gray */
 $color6: #6EA842;  /* Greenergy <p> color */
+$color7: rgba($color5, 0.40);
 $border1: $color5 1px dashed;
 $border2: $color5 1px solid;
+$border3: $color7 1px solid;
 
 
 @mixin special-border($radius, $border-color, $type) {
@@ -151,15 +153,8 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: $color3;
 }
 
-#results-title {}
-
 #user-inputs{
-  margin: 0 2em 0 2em;
-  border: $border1;
-}
-
-#user-results{
-  margin: 0 2em 0 2em;
+  margin: 1em 2em 1em 2em;
   border: $border1;
 }
 
@@ -175,7 +170,6 @@ browser uses. This is the bread and butter of responsive web design.*/
 #submit {
   text-align: center;
   background-color: $color2;
-  /*border: 1px dashed gray;*/
 }
 
 #submit-button {
@@ -185,19 +179,39 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: $color4;
 }
 
-#user-results .column  {
-  border-left: $border2; 
-  border-right: $border2;
-  margin-left: 0px;
-}
-
-#user-results .row {
-  border: $border2; 
+#user-results{
+  margin: 1em 2em 1em 2em;
+  border: $border1;
+  color: $color6;
+  @include special-border(8px, $color7, solid);
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-#user-results {
-  color: $color6;
-  border: 0px;
+#user-results .column  {
+  margin-left: 0px;
+}
+
+#user-results .row {
+  position: relative;
+}
+
+#user-results .column:nth-child(1) {
+  position: absolute;
+  left: 7em;
+}
+
+#user-results .column:nth-child(3) {
+  position: absolute;
+  right: 4em;
+}
+
+#user-results #results-title{
+  position: relative;
+  left: 0;
+}
+
+#cell-value {
+  border-bottom: $border3;
+  text-align: right;
 }

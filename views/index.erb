@@ -1,63 +1,63 @@
 <html>
-  <head>
-    <title>179D Calculator</title>
+	<head>
+		<title>179D Calculator</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 	<body>
-    <div class="container">
+		<div class="container">
 <!-- Header and logo -->
-      <div class="row header">
-      </div>
+			<div class="row header">
+			</div>
 <!-- Banner image -->
-      <div class="row banner">
-        <img src="http://lorempixel.com/640/281/sports/1/">
-      </div>
+			<div class="row banner">
+				<img src="http://lorempixel.com/640/281/sports/1/">
+			</div>
 			<div class="main">
 <!-- Calculator title -->
-        <div class="row">
-          <div class="column full" id="calculator-title">
-            <strong>179D Tax Estimation &nbsp;&nbsp;&gt;</strong>Energy Efficient Buildings
-          </div>
-        </div>
-        <div class="inner">
+				<div class="row">
+					<div class="column full" id="calculator-title">
+						<strong><h3>179D Tax Estimation &nbsp;&nbsp;&gt;&nbsp</strong>Energy Efficient Buildings
+					</div>
+				</div>
+				<div class="inner">
 <!-- ***************** User Inputs***************** -->
-          <div id="user-inputs">
+					<div id="user-inputs">
 <!-- Inputs Title -->
-            <div class="row">
-              <div class="column full" id="inputs-title">
-                <strong>Please fill in the inputs:</strong>
-              </div>
-            </div>
+						<div class="row">
+							<div class="column full" id="inputs-title">
+								<strong>Please fill in the inputs:</strong>
+							</div>
+						</div>
 <!-- Name field -->
-            <div class="row">
-              <label for="name" class="column one-third">Enter your Name:</label>
-              <div class="column one-fifth"></div>
-              <input class="column one-fifth" type="text" id="name" value="Rachel">
-              <div class="column one-fifth"></div>
-            </div>
+						<div class="row">
+							<label for="name" class="column one-third">Enter your Name:</label>
+							<div class="column one-fifth"></div>
+							<input class="column one-fifth" type="text" id="name" value="Rachel">
+							<div class="column one-fifth"></div>
+						</div>
 <!-- Building size field -->
-            <div class="row">
-              <label for="building-size" class="column one-third">Building's size (sqft):</label>
-              <div class="column one-fifth"></div>
-              <input class="column one-fifth" type="text" id="building-size" value="100000">
-              <div class="column one-fifth"></div>
-            </div>
+						<div class="row">
+							<label for="building-size" class="column one-third">Building's size (sqft):</label>
+							<div class="column one-fifth"></div>
+							<input class="column one-fifth" type="text" id="building-size" value="100000">
+							<div class="column one-fifth"></div>
+						</div>
 <!-- Building type dropdown menu -->
-            <div class="row">
-              <label for="building-type" class="column one-third">Building Type:</label>
-              <div class="column one-fifth"></div>
-              <input list="building-types" class="column one-fifth" value="menu list"/>
-                <datalist id="building-types">
-                  <option value="Government"></option>
-                  <option value="Commercial"></option>
-                  <option value="Residential"></option>
-                </datalist>
-              <div class="column one-fifth"></div>
-            </div>
+						<div class="row">
+							<label for="building-type" class="column one-third">Building Type:</label>
+							<div class="column one-fifth"></div>
+							<input list="building-types" class="column one-fifth" value="menu list"/>
+								<datalist id="building-types">
+									<option value="Government"></option>
+									<option value="Commercial"></option>
+									<option value="Residential"></option>
+								</datalist>
+							<div class="column one-fifth"></div>
+						</div>
 <!--Energy efficiceny selection boxes: -->
 						<div class="row" id="energy-type">
 							<div class="column one-third">
@@ -76,47 +76,46 @@
 								<input type="checkbox" id="env" style="width: 200px;">
 							</div>
 						</div>
-          </div>
+					</div>
 <!--***************** User Results: *****************-->
-          <div id="user-results">
+					<div id="user-results">
 <!-- Results Title -->
-            <div class="row">
-              <div class="column full" id="results-title">
-                <h3>Tax Deduction Estimation:</h3>
-              </div>
-            </div>
+						<div class="row">
+							<div class="column full" id="results-title">
+								<h3>Tax Deduction Estimation:</h3>
+							</div>
+						</div>
 <!-- Line Item 1 -->
             <div class="row">
-              <div class="column one-third">Square-footage</div>
+              <div class="column one-third">Building size:</div>
               <div class="column one-third"></div>
-              <div class="column one-third">(answer)</div>              
+              <div class="column one-third" id="cell-value">(answer)</div>              
             </div>
 <!-- Line Item 2 -->
             <div class="row">
-              <div class="column one-third">Square-footage</div>
+              <div class="column one-third">Building size:</div>
               <div class="column one-third"></div>
-              <div class="column one-third">(answer)</div>              
+              <div class="column one-third" id="cell-value">(answer)</div>              
             </div>
 <!-- Line Item 3 -->
-          <div class="row">
-            <div class="column one-third">Square-footage</div>
-            <div class="column one-third"></div>
-            <div class="column one-third">(answer)</div>              
-          </div>
+            <div class="row">
+              <div class="column one-third">Building size:</div>
+              <div class="column one-third"></div>
+              <div class="column one-third" id="cell-value">(answer)</div>              
+            </div>
 <!-- Line Item 4 -->
-          <div class="row">
-            <div class="column one-third">Square-footage</div>
-            <div class="column one-third"></div>
-            <div class="column one-third">(answer)</div>              
-          </div>
-        </div>
+            <div class="row">
+              <div class="column one-third">Building size:</div>
+              <div class="column one-third"></div>
+              <div class="column one-third" id="cell-value">(answer)</div>              
+            </div>
 <!-- ************************************* -->
 <!-- Submit button: -->
 					<div class="row" id="submit">
 						<input id="submit-button" type="submit" >
 					</div>
-        </div>
+				</div>
 
-		<script type="text/javascript" src="calculator.js"></script>
+		<!-- <script type="text/javascript" src="calculator.js"></script> -->
 	</body>
 </html>

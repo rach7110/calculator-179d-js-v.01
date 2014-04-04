@@ -118,11 +118,7 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: #ec6f66; }
 
 #user-inputs {
-  margin: 0 2em 0 2em;
-  border: #666666 1px dashed; }
-
-#user-results {
-  margin: 0 2em 0 2em;
+  margin: 1em 2em 1em 2em;
   border: #666666 1px dashed; }
 
 #energy-type {
@@ -135,8 +131,7 @@ browser uses. This is the bread and butter of responsive web design.*/
 
 #submit {
   text-align: center;
-  background-color: #eeeeee;
-  /*border: 1px dashed gray;*/ }
+  background-color: #eeeeee; }
 
 #submit-button {
   text-align: center;
@@ -144,16 +139,37 @@ browser uses. This is the bread and butter of responsive web design.*/
   background-color: #6ea842;
   color: white; }
 
-#user-results .column {
-  border-left: #666666 1px solid;
-  border-right: #666666 1px solid;
-  margin-left: 0px; }
-
-#user-results .row {
-  border: #666666 1px solid;
+#user-results {
+  margin: 1em 2em 1em 2em;
+  border: #666666 1px dashed;
+  color: #6ea842;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: rgba(102, 102, 102, 0.4) 1px solid;
   padding-top: 0px;
   padding-bottom: 0px; }
 
-#user-results {
-  color: #6ea842;
-  border: 0px; }
+#user-results .column {
+  margin-left: 0px; }
+
+#user-results .row {
+  position: relative; }
+
+#user-results .column:nth-child(1) {
+  position: absolute;
+  left: 7em; }
+
+#user-results .column:nth-child(3) {
+  position: absolute;
+  right: 4em; }
+
+#user-results #results-title {
+  position: relative;
+  left: 0; }
+
+#cell-value {
+  border-bottom: rgba(102, 102, 102, 0.4) 1px solid;
+  text-align: right; }
