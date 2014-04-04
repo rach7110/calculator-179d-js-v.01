@@ -32,6 +32,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
   padding: 0px;
   font-size: 22px;
   color: $color5;
+  font-family: 'Georgia';
 }
 
 label {
@@ -107,25 +108,6 @@ input {
   width: 15%;
 }
 
-/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
-browser uses. This is the bread and butter of responsive web design.*/
-@media all and (max-width: 640px) {
-  .column.full,
-  .column.two-thirds,
-  .column.half,
-  .column.one-third,
-  .column.one-fourth {
-    margin: 0;
-    width: 100%;
-  }
-  img {
-    max-width: 90%;
-  }
-  label{
-    text-align: center;
-  }
-}
-
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
 
 
@@ -192,13 +174,9 @@ browser uses. This is the bread and butter of responsive web design.*/
   margin-left: 0px;
 }
 
-#user-results .row {
-  position: relative;
-}
-
 #user-results .column:nth-child(1) {
   position: absolute;
-  left: 7em;
+  left: 5em;
 }
 
 #user-results .column:nth-child(3) {
@@ -209,6 +187,19 @@ browser uses. This is the bread and butter of responsive web design.*/
 #user-results #results-title{
   position: relative;
   left: 0;
+}
+
+#user-results .row {
+  position: relative;
+} 
+
+#user-results .row {
+  padding: 0;
+  height: 35px;
+}
+
+#submit.row {
+  padding: 30px 30px 60px 30px;
 }
 
 #user-results .row:nth-child(1) {
@@ -222,4 +213,39 @@ browser uses. This is the bread and butter of responsive web design.*/
 #cell-value {
   border-bottom: $border3;
   text-align: right;
+  }
+
+/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
+browser uses. This is the bread and butter of responsive web design.*/
+@media all and (max-width: 640px) {
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth,
+  .column.one-fifth {
+    margin: 0;
+    width: 100%;
+  }
+  img {
+    max-width: 90%;
+  }
+  label{
+    text-align: center;
+  }
+  #user-results .column:nth-child(1) {
+    position: relative;
+    left: auto;
+    right: auto;
+    color: red;
+  }
+}
+
+table {
+  margin-left:5em;
+}
+
+td {
+  width: 300px;
+  padding-bottom: 5px;
 }
