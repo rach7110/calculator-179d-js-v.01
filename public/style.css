@@ -172,6 +172,10 @@ input {
   border-bottom: rgba(102, 102, 102, 0.4) 1px solid;
   text-align: right; }
 
+#benefit-result, #size-result {
+  text-align: right; }
+}
+
 /*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
 browser uses. This is the bread and butter of responsive web design.*/
 @media all and (max-width: 640px) {
@@ -201,3 +205,8 @@ table {
 td {
   width: 300px;
   padding-bottom: 5px; }
+
+  #footer {
+    height: 20px;
+    margin-bottom: 20px;
+  }

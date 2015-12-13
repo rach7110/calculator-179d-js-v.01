@@ -4,6 +4,8 @@
 
 		<link rel="stylesheet" href="style.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="calculator.js"></script>
+
 		<!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
@@ -36,7 +38,7 @@
 						<div class="row">
 							<label for="name" class="column one-third">Enter your Name:</label>
 							<div class="column one-fifth"></div>
-							<input class="column one-fifth" type="text" id="name" value="Rachel">
+							<input class="column one-fifth" type="text" id="name">
 							<div class="column one-fifth"></div>
 						</div>
 <!-- Building size field -->
@@ -47,17 +49,16 @@
 							<div class="column one-fifth"></div>
 						</div>
 <!-- Building type dropdown menu -->
-						<div class="row">
-							<label for="building-type" class="column one-third">Building Type:</label>
+<!-- 						<div class="row">
+							<label for="building-type" class="column one-third">Building Type:<input list="building-types" value="menu list"/></label>
 							<div class="column one-fifth"></div>
-							<input list="building-types" class="column one-fifth" value="menu list"/>
-								<datalist id="building-types">
-									<option value="Government"></option>
-									<option value="Commercial"></option>
-									<option value="Residential"></option>
-								</datalist>
+                            <datalist class="column one-fifth" id="building-types">
+                                <option value="Government">
+                                <option value="Commercial">
+                                <option value="Residential">
+                            </datalist>
 							<div class="column one-fifth"></div>
-						</div>
+						</div> -->
 <!--Energy efficiceny selection boxes: -->
 						<div class="row" id="energy-type">
 							<div class="column one-third">
@@ -76,97 +77,62 @@
 								<input type="checkbox" id="env" style="width: 200px;">
 							</div>
 						</div>
+
+                        <!-- Submit button: -->
+                    <div class="row" id="submit">
+                        <input id="submit-button" type="submit" >
+                    </div>
+
 					</div>
 <!--***************** User Results: *****************-->
 					<div id="user-results">
-<!-- Results Title -->
+					<!-- Results Title -->
 						<div class="row">
 							<div class="column full" id="results-title">
 								<h3>Tax Deduction Estimation:</h3>
 							</div>
 						</div>
-<!-- Line Item 1 -->
-            <div class="row">
-              <div class="column one-third">Building size:</div>
-              <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">(answer)</div>              
-            </div>
-<!-- Line Item 2 -->
-            <div class="row">
-              <div class="column half">Efficient Systems:</div>
-<!--               <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">(answer)</div>  -->             
-            </div>
-<!-- Line Item 3 -->
-            <div class="row">
-              <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Lighting</div>
-              <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">$0.60</div>              
-            </div>
-<!-- Line Item 4 -->
-            <div class="row">
-              <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient HVAC:</div>
-              <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">$0.60</div>              
-            </div>
-<!-- Line Item 5 -->
-            <div class="row">
-              <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Envelope:</div>
-              <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">$0.60</div>              
-            </div>
-<!-- Line Item 6 -->
-            <div class="row">
-              <div class="column half">x&nbsp;total deduction per sq.ft.</div>
-              <div class="column one-third"></div>
-              <div class="column one-third" id="cell-value">(answer)</div>              
-            </div>
-<!-- Test Table -->
-<table>
-<!-- Line Iten 1 -->
-  <tr>
-    <td>Building Size:</td>
-    <td></td>
-    <td>(answer)</td>
-  </tr>
-<!-- Line Iten 2 -->
-  <tr>
-    <td>Efficient Systems:</td>
-    <td></td>
-    <td></td>
-  </tr>
-<!-- Line Iten 3 -->
-  <tr>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Lighting:</td>
-    <td></td>
-    <td></td>
-  </tr>
-<!-- Line Iten 4-->
-  <tr>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient HVAC:</td>
-    <td></td>
-    <td></td>
-  </tr>
-<!-- Line Iten 5 -->
-  <tr>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Envelope:</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>x&nbsp;&nbsp;total deduction per sq.ft.</td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+						<!-- Line Item 1 -->
+						<div class="row">
+                            <div class="column one-third">Building size:</div>
+                            <div class="column one-third"></div>
+                            <div class="column one-third" id="size-result"></div>              
+            			</div>
 
-<!-- ************************************* -->
-<!-- Submit button: -->
-					<div class="row" id="submit">
-						<input id="submit-button" type="submit" >
-					</div>
-				</div>
+                        <!-- Line Item 2 -->
+                        <div class="row">
+                            <div class="column half">Efficient Systems:</div>
+                        <!--               <div class="column one-third"></div>
+                        <div class="column one-third" id="cell-value">(answer)</div>  -->             
+                        </div>
+                        <!-- Line Item 3 -->
+                        <div class="row">
+                            <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Lighting</div>
+                            <div class="column one-third"></div>
+                            <div class="column one-third" id="cell-value">$0.60</div>              
+                        </div>
+                        <!-- Line Item 4 -->
+                        <div class="row">
+                            <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient HVAC:</div>
+                            <div class="column one-third"></div>
+                            <div class="column one-third" id="cell-value">$0.60</div>              
+                        </div>
+                        <!-- Line Item 5 -->
+                        <div class="row">
+                            <div class="column half">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficient Envelope:</div>
+                            <div class="column one-third"></div>
+                            <div class="column one-third" id="cell-value">$0.60</div>              
+                        </div>
+                        <!-- Line Item 6 -->
+                        <div class="row">
+                            <div class="column half">x&nbsp;total deduction per sq.ft.</div>
+                            <div class="column one-third"></div>
+                            <div class="column one-third" id="benefit-result"></div>              
+                        </div>
+                    </div>
 
-		<!-- <script type="text/javascript" src="calculator.js"></script> -->
+                    <div id="footer">
+                    </div>
+
 	</body>
 </html>
