@@ -20,29 +20,37 @@ label {
   text-align: right; }
 
 input {
-  text-align: center; }
+  text-align: center; 
+}
 
 .container {
+    background-color: #e8f7d2;
+
   /*background-image: url('background-image-179d.jpg')*/ }
 
-.header {
-  height: 123px; }
 
 .header, .main, .inner {
   margin: 0 auto;
-  max-width: 1216px;
   width: 90%;
-  background-color: white;
-  -webkit-border-radius: 8px;
+  background-color: #F8F8F8;
+/*  -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  border: #666666 1px solid; }
+  border: #666666 1px solid; */
+}
+
+.row.banner {
+    padding: 20px 0 20px 0;
+}
 
 .banner img {
   margin: 0 auto;
-  display: block; }
+  display: block; 
+  max-width: 100%
+
+}
 
 .inner {
   max-width: 960px;
@@ -52,7 +60,14 @@ input {
 
 .row {
   overflow: hidden;
-  padding: 30px; }
+  padding: 30px; 
+}
+
+.header {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 30px;
+}
 
 .column {
   float: left;
